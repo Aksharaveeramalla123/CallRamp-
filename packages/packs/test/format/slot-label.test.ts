@@ -14,7 +14,7 @@ describe('formatSlotLabel', () => {
         '2027-03-04T09:00:00Z',
         options,
       ),
-    ).toBe('this afternoon at 2');
+    ).toBe('this afternoon at two');
   });
 
   it('formats tomorrow', () => {
@@ -24,7 +24,7 @@ describe('formatSlotLabel', () => {
         '2027-03-04T09:00:00Z',
         options,
       ),
-    ).toBe('tomorrow at half 11');
+    ).toBe('tomorrow at half eleven');
   });
 
   it('formats a later weekday', () => {
@@ -34,7 +34,7 @@ describe('formatSlotLabel', () => {
         '2027-03-04T09:00:00Z',
         options,
       ),
-    ).toBe('Sunday morning at 9');
+    ).toBe('Sunday morning at nine');
   });
 
   it('formats a date more than a week away', () => {
@@ -44,7 +44,7 @@ describe('formatSlotLabel', () => {
         '2027-03-04T09:00:00Z',
         options,
       ),
-    ).toBe('Thursday the 18th at 11');
+    ).toBe('Thursday the 18th at eleven');
   });
 
   it('formats midnight', () => {
@@ -54,7 +54,7 @@ describe('formatSlotLabel', () => {
         '2027-03-04T09:00:00Z',
         options,
       ),
-    ).toBe('tomorrow at 12');
+    ).toBe('tomorrow at midnight');
   });
 
   it('formats an exact hour', () => {
@@ -64,7 +64,7 @@ describe('formatSlotLabel', () => {
         '2027-03-04T08:00:00Z',
         options,
       ),
-    ).toBe('this morning at 9');
+    ).toBe('this morning at nine');
   });
 
   it('formats a slot ten minutes from now', () => {
@@ -74,6 +74,6 @@ describe('formatSlotLabel', () => {
         '2027-03-04T09:00:00Z',
         options,
       ),
-    ).toBe('this morning at 9:10');
+    ).toBe('this morning at nine ten');
   });
 });
